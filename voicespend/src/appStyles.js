@@ -22,3 +22,9 @@ export default makeStyles((theme) => ({
       paddingBottom: '200px',
     },
   },
+  grid: {
+    '& > *': {
+      margin: theme.spacing(2),
+    },
+  },
+}));
