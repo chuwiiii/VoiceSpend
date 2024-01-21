@@ -5,3 +5,7 @@ import Details from './components/Details/Details';
 import Main from './components/Main/Main';
 
 import useStyles from './appStyles';
+
+const App = () => {
+    const classes = useStyles();
+  return (
