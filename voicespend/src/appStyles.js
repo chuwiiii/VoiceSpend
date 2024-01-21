@@ -6,3 +6,8 @@ export default makeStyles((theme) => ({
       display: 'none',
     },
   },
+  mobile: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  },
