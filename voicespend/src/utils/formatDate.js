@@ -9,6 +9,9 @@ const formatDate = (date) => {
       }
       if (day.length < 2) {
         day = `0${day}`;
-      } 
+      }
+      
+      
 
 };
+export default formatDate;
