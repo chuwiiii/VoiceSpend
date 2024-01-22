@@ -4,3 +4,5 @@ import { Card, CardHeader, CardContent, Typography, Grid, Divider } from '@mater
 import useStyles from './mainStyles';
 import Form from './Form/Form';
 import List from './List/List';
+
+const Main = () => {
