@@ -15,3 +15,6 @@ export default makeStyles((theme) => ({
         expandOpen: {
             transform: 'rotate(180deg)',
           },
+          cartContent: {
+            paddingTop: 0,
+          },
