@@ -7,3 +7,4 @@ export default makeStyles((theme) => ({
       },
       expand: {
         transform: 'rotate(0deg)',
+        marginLeft: 'auto',
