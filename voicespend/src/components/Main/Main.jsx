@@ -11,3 +11,4 @@ const Main = () => {
         <Card className={classes.root}>
             <CardHeader title="Expense Tracker" subheader="Powered by Speechly" />
             <CardContent>
+            <Typography align="center" variant="h5"> Total balance: $100</Typography>
