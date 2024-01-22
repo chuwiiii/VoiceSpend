@@ -7,3 +7,5 @@ import List from './List/List';
 
 const Main = () => {
     const classes = useStyles();
+    return (
+        <Card className={classes.root}>
