@@ -12,3 +12,6 @@ export default makeStyles((theme) => ({
             duration: theme.transitions.duration.shortest,
           }),
         },
+        expandOpen: {
+            transform: 'rotate(180deg)',
+          },
