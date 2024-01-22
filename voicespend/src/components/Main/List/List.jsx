@@ -7,6 +7,9 @@ import useStyles from './listStyles';
 
 const List = () => {
     const classes = useStyles();
+    const globalState = useContex(ExpenseTrackerContext);
+
+    console.log(globalState);
 
     const transactions = [
         {id: 1, type: "Income", category: 'Salary', amount: 50, date: "Fri Jan 19 2024" },
