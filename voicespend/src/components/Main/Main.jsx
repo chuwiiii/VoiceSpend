@@ -12,3 +12,7 @@ const Main = () => {
         <CardHeader title="Expense Tracker" subheader="Powered by Speechly" />
         <CardContent></CardContent>
         <Typography align="center" variant="h5"> Total balance: $100</Typography>
+        <Typography variant="subtitle1" style={{ lineHeight: '1.5em', marginTop: '20px' }}>
+                {/* info card */}
+                Try saying: Add income for $100 in category salary for Monday.....
+            </Typography>
