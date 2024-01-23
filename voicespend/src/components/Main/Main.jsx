@@ -1,17 +1,10 @@
 import React, {useContext} from 'react';
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  Typography,
-  Grid,
-  Divider,
-} from "@material-ui/core";
-import { ExpenseTrackerContext } from "../../context/context";
+import { Card, CardHeader, CardContent, Typography, Grid, Divider } from '@material-ui/core';
+import { ExpenseTrackerContext } from '../../context/context';
 
-import useStyles from "./mainStyles";
-import Form from "./Form/Form";
-import List from "./List/List";
+import useStyles from './mainStyles';
+import Form from './Form/Form';
+import List from './List/List';
 
 const Main = () => {
   const classes = useStyles();
@@ -27,16 +20,19 @@ const Main = () => {
         }
       />
       <CardContent>
-      <Typography align="center" variant="h5" className={classes.title}>
+        <Typography align="center" variant="h5" className={classes.title}>
           {' '}
           Total balance: ${balance}
         </Typography>
         <Typography
           variant="subtitle1"
           className={`${classes.subtitle} ${classes.title}`}
-          style={{ lineHeight: '1.5em', marginTop: '20px' }}>
+          style={{ lineHeight: '1.5em', marginTop: '20px' }}
+        >
+          {/* info card */}
+          Try saying: Add income for $100 in category salary for Monday.....
         </Typography>
-        <Divider />
+        <Divider className={classes.divider} />
         <Form />
       </CardContent>
       <CardContent className={classes.cardContent}>
