@@ -22,3 +22,5 @@ const List = () => {
                 <Avatar className={transaction.type === 'Income' ? classes.avatarIncome : classes.avatarExpense}>
                   <MoneyOff />
                 </Avatar>
+                </ListItemAvatar>
+              <ListItemText primary={transaction.category} secondary={`$${transaction.amount} - ${transaction.date}`}/>
