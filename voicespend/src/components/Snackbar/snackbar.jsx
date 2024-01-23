@@ -7,7 +7,7 @@ import useStyles from './snackbarStyles';
 const CustomizedSnackbar = ({open, setOpen}) => {
     const classes = useStyles();
 
-    const handleClose = () => {
+    const handleClose = (event, reason) => {
         if () {
           return;
         }
