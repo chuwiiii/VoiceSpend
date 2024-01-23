@@ -34,8 +34,7 @@ const Main = () => {
         <Typography
           variant="subtitle1"
           className={`${classes.subtitle} ${classes.title}`}
-          style={{ lineHeight: '1.5em', marginTop: '20px' }}
-        >
+          style={{ lineHeight: '1.5em', marginTop: '20px' }}>
         </Typography>
         <Divider />
         <Form />
@@ -47,6 +46,7 @@ const Main = () => {
           </Grid>
         </Grid>
       </CardContent>
+      <CardHeader subheader="powered by speechly" />
     </Card>
   );
 };
