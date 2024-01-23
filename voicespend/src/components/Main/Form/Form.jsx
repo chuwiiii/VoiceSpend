@@ -71,6 +71,9 @@ const initialState = {
       <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction}>
         Create
       </Button>
+      <Button className={classes.button} variant="contained" color="secondary" fullWidth onClick={clearAllTransactions}>
+        Clear All
+      </Button>
     </Grid>
   );
 }
