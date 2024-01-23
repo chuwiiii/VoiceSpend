@@ -15,3 +15,5 @@ const Form = () => {
         </Grid>
         <Grid item xs={6}>
         <FormControl fullWidth>
+        <InputLabel>Type</InputLabel>
+        <Select>
