@@ -22,9 +22,9 @@ const App = () => {
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
         }}
       >
-            <Grid item xs={12} sm={4}>
-                <Details title="Income"/>
-            </Grid>
+        <Grid item xs={12} sm={3} style={{ backgroundColor: '#add8e6', borderRadius: '15px' }} className={classes.mobile}>
+            <Details title="Income" />
+        </Grid>
             <Grid item xs={12} sm={3}>
                 <Main />
             </Grid>
