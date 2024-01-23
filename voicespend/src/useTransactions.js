@@ -15,6 +15,11 @@ const useTransactions = (title) => {
 
         if (category) category.amount += t.amount;
   });
+
+  const filteredCategories = categories.filter((sc) => sc.amount > 0);
+
+  return { filteredCategories, total };
+  
 }
 
 export default useTransactions;
