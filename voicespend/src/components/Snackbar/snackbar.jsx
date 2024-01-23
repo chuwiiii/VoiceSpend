@@ -8,7 +8,7 @@ const CustomizedSnackbar = ({open, setOpen}) => {
     const classes = useStyles();
 
     const handleClose = (event, reason) => {
-        if () {
+        if (reason === 'clickaway') {
           return;
         }
     
