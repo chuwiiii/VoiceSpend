@@ -12,7 +12,7 @@ const CustomizedSnackbar = ({open, setOpen}) => {
           return;
         }
     
-        setOpen();
+        setOpen(false);
       };
 
 };
