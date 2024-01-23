@@ -8,3 +8,5 @@ export default makeStyles((theme) => ({
   },
   avatarExpense: {
     color: theme.palette.getContrastText(red[500]),
+    backgroundColor: red[500],
+  },
