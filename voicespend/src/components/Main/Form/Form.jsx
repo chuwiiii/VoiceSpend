@@ -30,6 +30,8 @@ const initialState = {
         addTransaction(transaction);
         setFormData(initialState);
       };
+
+      const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories;
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
