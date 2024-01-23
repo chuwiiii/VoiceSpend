@@ -16,9 +16,9 @@ const CustomizedSnackbar = ({open, setOpen}) => {
       };
 
       return (
-        <div className={}>
+        <div className={classes.root}>
           <Snackbar 
-          anchorOrigin={{ }} 
+          anchorOrigin={{ vertical: 'top', horizontal: 'right' }} 
           open={} autoHideDuration={} onClose={}>
             <MuiAlert onClose={} severity="success" elevation={} variant="">Transaction successfully created.</MuiAlert>
           </Snackbar>
