@@ -62,9 +62,9 @@ const initialState = {
           </Select>
         </FormControl>
       </Grid>
-        <Grid item xs={6}>
-        <TextField type="number" label="Amount" fullWidth />
-        </Grid>
+      <Grid item xs={6}>
+        <TextField type="number" label="Amount" fullWidth value={formData.amount} onChange={(e) => setFormData({ ...formData, amount: e.target.value })} />
+      </Grid>
         <Grid item xs={6}>
             <TextField type="date" label="Date" fullWidth />
         </Grid>
