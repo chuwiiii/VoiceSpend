@@ -16,12 +16,20 @@ const initialState = {
     date: formatDate(new Date()),
   };
 
-const Form = () => {
+    const Form = () => {
     const classes = useStyles();
     const [formData, setFormData] = useState(initialState);
     const { addTransaction, clearTransactions } = useContext(ExpenseTrackerContext);
     const [open, setOpen] = useState(false);
 
+
+    const createTransaction = () => {
+        const transaction = { ...formData, amount: Number(formData.amount), id: uuidv4() };
+    
+        setOpen(true);
+        addTransaction(transaction);
+        setFormData(initialState);
+      };
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
