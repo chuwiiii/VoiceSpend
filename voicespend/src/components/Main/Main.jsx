@@ -22,15 +22,13 @@ const Main = () => {
       <CardContent>
         <Typography align="center" variant="h5" className={classes.title}>
           {' '}
-          Total balance: ${balance}
+          Total balance: ₱{balance}
         </Typography>
         <Typography
           variant="subtitle1"
           className={`${classes.subtitle} ${classes.title}`}
           style={{ lineHeight: '1.5em', marginTop: '20px' }}
         >
-          {/* info card */}
-          Try saying: Add income for $100 in category salary for Monday.....
         </Typography>
         <Divider className={classes.divider} />
         <Form />
