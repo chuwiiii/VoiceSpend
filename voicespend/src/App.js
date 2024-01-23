@@ -7,10 +7,11 @@ import Main from './components/Main/Main';
 import useStyles from './appStyles';
 
 const App = () => {
-    const classes = useStyles();
+  const classes = useStyles();
+
   return (
     <div>
-        <Grid
+      <Grid
         className={classes.grid}
         container
         spacing={3}
@@ -23,10 +24,10 @@ const App = () => {
         }}
       >
         <Grid item xs={12} sm={3} style={{ backgroundColor: '#add8e6', borderRadius: '15px' }} className={classes.mobile}>
-            <Details title="Income" />
+          <Details title="Income" />
         </Grid>
         <Grid item xs={12} sm={3} style={{ backgroundColor: '#add8e6', borderRadius: '15px' }} className={classes.main}>
-          <Details title="Expenses" />
+          <Details title="Expense" />
         </Grid>
         <Grid item xs={12} sm={3} style={{ backgroundColor: '#add8e6', borderRadius: '15px' }} className={classes.desktop}>
           <Details title="Income" />
@@ -34,7 +35,7 @@ const App = () => {
         <Grid item xs={12} sm={5} style={{ backgroundColor: '#add8e6', borderRadius: '15px' }} className={classes.last}>
           <Main />
         </Grid>
-        </Grid>
+      </Grid>
     </div>
   );
 }
