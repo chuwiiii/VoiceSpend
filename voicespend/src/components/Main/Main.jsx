@@ -33,7 +33,8 @@ const Main = () => {
         </Typography>
         <Typography
           variant="subtitle1"
-          style={{ lineHeight: "1.5em", marginTop: "20px" }}
+          className={`${classes.subtitle} ${classes.title}`}
+          style={{ lineHeight: '1.5em', marginTop: '20px' }}
         >
           {/* info card */}
           Try saying: Add income for $100 in category salary for Monday.....
