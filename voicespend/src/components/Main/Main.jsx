@@ -36,8 +36,6 @@ const Main = () => {
           className={`${classes.subtitle} ${classes.title}`}
           style={{ lineHeight: '1.5em', marginTop: '20px' }}
         >
-          {/* info card */}
-          Try saying: Add income for $100 in category salary for Monday.....
         </Typography>
         <Divider />
         <Form />
