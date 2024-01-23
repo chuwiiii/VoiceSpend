@@ -3,19 +3,18 @@ import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';
 import useTransactions from '../../useTransactions';
 import useStyles from './stylesDetails';
 
-
 const Details = ({ title }) => {
-    const classes = useStyles();
-    const { total } = useTransactions(title);
+  const classes = useStyles();
+  const { total } = useTransactions(title);
 
-    return (
-        <Card className={ title === 'Income' ? classes.income : classes.expense}>
-            <CardHeader title={title} />
-            <CardContent>
-            <Typography variant="h5">${total}</Typography>
-        </CardContent>
+  return (
+    <Card className={title === 'Income' ? classes.income : classes.expense}>
+      <CardHeader title={title} />
+      <CardContent>
+        <Typography variant="h5">${total}</Typography>
+      </CardContent>
     </Card>
   );
 };
 
-export default Details
+export default Details;
