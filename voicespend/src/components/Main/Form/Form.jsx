@@ -20,3 +20,6 @@ const Form = () => {
         <MenuItem value="Income">Income</MenuItem>
                     <MenuItem value="Expense">Expense</MenuItem>
                 </Select>
+                </FormControl>
+        </Grid>
+        <Grid item xs={6}>
