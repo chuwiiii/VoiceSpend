@@ -1,47 +1,51 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { TextField, Typography, Grid, Button, FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
 import { ExpenseTrackerContext } from '../../../context/context';
 import { v4 as uuidv4 } from 'uuid';
 
-
 import formatDate from '../../../utils/formatDate';
+import useStyles from './formStyles';
 import { incomeCategories, expenseCategories } from '../../../constants/categories';
 import CustomizedSnackbar from '../../Snackbar/snackbar';
-import useStyles from './formStyles';
 
 const initialState = {
-    amount: '',
-    category: '',
-    type: 'Income',
-    date: formatDate(new Date()),
+  amount: '',
+  category: '',
+  type: 'Income',
+  date: formatDate(new Date()),
+};
+
+const Form = () => {
+  const classes = useStyles();
+  const [formData, setFormData] = useState(initialState);
+  const { addTransaction, clearTransactions } = useContext(ExpenseTrackerContext);
+  const [open, setOpen] = useState(false);
+
+  const createTransaction = () => {
+    const transaction = { ...formData, amount: Number(formData.amount), id: uuidv4() };
+
+    setOpen(true);
+    addTransaction(transaction);
+    setFormData(initialState);
   };
 
-    const Form = () => {
-    const classes = useStyles();
-    const [formData, setFormData] = useState(initialState);
-    const { addTransaction, clearTransactions } = useContext(ExpenseTrackerContext);
-    const [open, setOpen] = useState(false);
+  const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories;
 
+  
 
-    const createTransaction = () => {
-        const transaction = { ...formData, amount: Number(formData.amount), id: uuidv4() };
-    
-        setOpen(true);
-        addTransaction(transaction);
-        setFormData(initialState);
-      };
+  const clearAllTransactions = () => {
+    clearTransactions();
+  };
 
-      const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories;
-    
-      return (
-        <Grid container spacing={2}>
-          <CustomizedSnackbar open={open} setOpen={setOpen} />
-          <Grid item xs={12}>
-            <Typography align="center" variant="subtitle2" gutterBottom>
-              ...
-            </Typography>
-          </Grid>
-          <Grid item xs={6}>
+  return (
+    <Grid container spacing={2}>
+      <CustomizedSnackbar open={open} setOpen={setOpen} />
+      <Grid item xs={12}>
+        <Typography align="center" variant="subtitle2" gutterBottom>
+          ...
+        </Typography>
+      </Grid>
+      <Grid item xs={6}>
         <FormControl fullWidth>
           <InputLabel>Type</InputLabel>
           <Select value={formData.type} onChange={(e) => setFormData({ ...formData, type: e.target.value })}>

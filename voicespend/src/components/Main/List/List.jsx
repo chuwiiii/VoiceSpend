@@ -7,9 +7,7 @@ import useStyles from './listStyles';
 
 const List = () => {
     const classes = useStyles();
-    
-
-
+    const { deleteTransaction, transactions } = useContext(ExpenseTrackerContext);
 
   return (
     <MUIList dense={false} className={classes.list}>
