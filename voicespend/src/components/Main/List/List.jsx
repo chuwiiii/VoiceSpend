@@ -3,3 +3,6 @@ import { List as MUIList, ListItem, ListItemAvatar, ListItemText, Avatar, ListIt
 import { Delete, MoneyOff } from '@material-ui/icons';
 
 import useStyles from './listStyles';
+
+const List = () => {
+    const classes = useStyles();
