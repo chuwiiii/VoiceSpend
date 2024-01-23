@@ -76,6 +76,6 @@ const initialState = {
       </Button>
     </Grid>
   );
-}
+};
 
 export default Form;
