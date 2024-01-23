@@ -8,15 +8,15 @@ import useStyles from './styles'
 const Details = ({ title }) => {
     const classes = useStyles();
     const { total } = useTransactions(title);
-    
+
     return (
         <Card className={ title === 'Income' ? classes.income : classes.expense}>
             <CardHeader title={title} />
             <CardContent>
-            <Typography variant="h5">${}</Typography>
+            <Typography variant="h5">${total}</Typography>
         </CardContent>
     </Card>
-  )
-}
+  );
+};
 
 export default Details
