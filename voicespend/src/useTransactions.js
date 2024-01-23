@@ -19,7 +19,7 @@ const useTransactions = (title) => {
   const filteredCategories = categories.filter((sc) => sc.amount > 0);
 
   return { filteredCategories, total };
-  
-}
+
+};
 
 export default useTransactions;
