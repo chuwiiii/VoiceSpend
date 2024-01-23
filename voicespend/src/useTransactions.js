@@ -6,3 +6,5 @@ import { incomeCategories, expenseCategories, resetCategories } from './constant
 const useTransactions = (title) => {
 
 }
+
+export default useTransactions;
