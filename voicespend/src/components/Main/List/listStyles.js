@@ -12,3 +12,6 @@ export default makeStyles((theme) => ({
   },
   list: {
     maxHeight: '150px',
+    overflow: 'auto',
+  },
+}));
