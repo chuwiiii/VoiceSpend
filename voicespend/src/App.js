@@ -25,9 +25,9 @@ const App = () => {
         <Grid item xs={12} sm={3} style={{ backgroundColor: '#add8e6', borderRadius: '15px' }} className={classes.mobile}>
             <Details title="Income" />
         </Grid>
-            <Grid item xs={12} sm={3}>
-                <Main />
-            </Grid>
+        <Grid item xs={12} sm={3} style={{ backgroundColor: '#add8e6', borderRadius: '15px' }} className={classes.main}>
+          <Details title="Expenses" />
+        </Grid>
             <Grid item xs={12} sm={4}>
                 <Details title="Expenses"/>
             </Grid>
