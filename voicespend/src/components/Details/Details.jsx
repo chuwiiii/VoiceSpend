@@ -3,7 +3,6 @@ import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';
 import useTransactions from '../../useTransactions';
 import useStyles from './stylesDetails';
 
-import useStyles from './styles'
 
 const Details = ({ title }) => {
     const classes = useStyles();
