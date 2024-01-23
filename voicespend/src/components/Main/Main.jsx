@@ -22,7 +22,7 @@ const Main = () => {
       <CardContent>
         <Typography align="center" variant="h5" className={classes.title}>
           {' '}
-          Total balance: ₱{balance}
+          Total balance: ${balance}
         </Typography>
         <Typography
           variant="subtitle1"
