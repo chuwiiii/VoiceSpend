@@ -9,6 +9,13 @@ import { incomeCategories, expenseCategories } from '../../../constants/categori
 import CustomizedSnackbar from '../../Snackbar/snackbar';
 import useStyles from './formStyles';
 
+const initialState = {
+    amount: '',
+    category: '',
+    type: 'Income',
+    date: formatDate(new Date()),
+  };
+
 const Form = () => {
     const classes = useStyles();
 
