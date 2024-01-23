@@ -68,7 +68,9 @@ const initialState = {
       <Grid item xs={6}>
         <TextField type="date" label="Date" fullWidth value={formData.date} onChange={(e) => setFormData({ ...formData, date: formatDate(e.target.value) })} />
       </Grid>
-        <Button className={classes.button} variant="outlined" color="primary" fullWidth></Button>
+      <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction}>
+        Create
+      </Button>
     </Grid>
   );
 }
