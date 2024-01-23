@@ -4,15 +4,15 @@ import MuiAlert from '@material-ui/lab/Alert';
 
 import useStyles from './snackbarStyles';
 
-const CustomizedSnackbar = ({ open, setOpen }) => {
+const CustomizedSnackbar = ({}) => {
     const classes = useStyles();
 
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
+    const handleClose = () => {
+        if () {
           return;
         }
     
-        setOpen(false);
+        setOpen();
       };
 
 };
