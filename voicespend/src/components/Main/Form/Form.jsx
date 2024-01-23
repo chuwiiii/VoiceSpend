@@ -32,13 +32,15 @@ const initialState = {
       };
 
       const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories;
-    return (
+    
+      return (
         <Grid container spacing={2}>
-            <Grid item xs={12}>
+          <CustomizedSnackbar open={open} setOpen={setOpen} />
+          <Grid item xs={12}>
             <Typography align="center" variant="subtitle2" gutterBottom>
-            ...
-        </Typography>
-        </Grid>
+              ...
+            </Typography>
+          </Grid>
         <Grid item xs={6}>
         <FormControl fullWidth>
         <InputLabel>Type</InputLabel>
