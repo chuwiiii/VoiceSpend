@@ -10,3 +10,5 @@ export default makeStyles((theme) => ({
     color: theme.palette.getContrastText(red[500]),
     backgroundColor: red[500],
   },
+  list: {
+    maxHeight: '150px',
