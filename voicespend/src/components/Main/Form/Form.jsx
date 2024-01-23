@@ -41,15 +41,15 @@ const initialState = {
               ...
             </Typography>
           </Grid>
-        <Grid item xs={6}>
+          <Grid item xs={6}>
         <FormControl fullWidth>
-        <InputLabel>Type</InputLabel>
-        <Select>
-        <MenuItem value="Income">Income</MenuItem>
-                    <MenuItem value="Expense">Expense</MenuItem>
-                </Select>
-                </FormControl>
-        </Grid>
+          <InputLabel>Type</InputLabel>
+          <Select value={formData.type} onChange={(e) => setFormData({ ...formData, type: e.target.value })}>
+            <MenuItem value="Income">Income</MenuItem>
+            <MenuItem value="Expense">Expense</MenuItem>
+          </Select>
+        </FormControl>
+      </Grid>
         <Grid item xs={6}>
         <FormControl fullWidth>
                 <InputLabel>Category</InputLabel>
