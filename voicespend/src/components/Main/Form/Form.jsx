@@ -17,3 +17,6 @@ const Form = () => {
         <FormControl fullWidth>
         <InputLabel>Type</InputLabel>
         <Select>
+        <MenuItem value="Income">Income</MenuItem>
+                    <MenuItem value="Expense">Expense</MenuItem>
+                </Select>
