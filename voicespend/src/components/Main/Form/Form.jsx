@@ -18,6 +18,9 @@ const initialState = {
 
 const Form = () => {
     const classes = useStyles();
+    const [formData, setFormData] = useState(initialState);
+    const { addTransaction, clearTransactions } = useContext(ExpenseTrackerContext);
+    const [open, setOpen] = useState(false);
 
     return (
         <Grid container spacing={2}>
