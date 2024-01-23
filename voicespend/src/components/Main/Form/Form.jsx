@@ -32,3 +32,5 @@ const Form = () => {
                 </FormControl>
         </Grid>
         <Grid item xs={6}>
+        <TextField type="number" label="Amount" fullWidth />
+        </Grid>
