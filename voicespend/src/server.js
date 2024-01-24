@@ -21,3 +21,19 @@ const db = mysql.createConnection({
       console.log('Connected to MySQL database');
     }
   });
+
+  app.post('/transactions', (req, res) => {
+    const { amount, category, type, date } = req.body;
+  
+    db.query(
+      'INSERT INTO transactions (amount, category, type, date) VALUES (?, ?, ?, ?)',
+      [amount, category, type, date],
+      (err, result) => {
+        if (err) {
+          res.status(500).json({ message: err.message });
+        } else {
+          res.status(201).json(result);
+        }
+      }
+    );
+  });
