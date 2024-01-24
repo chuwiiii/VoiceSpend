@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Grid } from '@material-ui/core';
-import axios from 'axios';
 
 import Details from './components/Details/Details';
 import Main from './components/Main/Main';
@@ -9,18 +8,6 @@ import useStyles from './appStyles';
 
 const App = () => {
   const classes = useStyles();
-
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:3001/api/data')
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  },[]);
 
   return (
     <div>

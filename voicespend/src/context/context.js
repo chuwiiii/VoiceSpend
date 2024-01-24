@@ -1,4 +1,4 @@
-import React, { useReducer, createContext, useMemo } from 'react';
+import React, { useEffect, useReducer, createContext, useMemo } from 'react';
 
 import contextReducer from './contextReducer';
 
@@ -20,6 +20,18 @@ export const Provider = ({ children }) => {
     transactions.reduce((acc, currVal) => currVal.type === 'Expense' ? acc - currVal.amount : acc + currVal.amount, 0),
     [transactions]
   );
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/transactions') // Update with your backend URL
+      .then((response) => dispatch({ type: 'SET_TRANSACTIONS', payload: response.data }))
+      .catch((error) => console.error(error));
+  }, []);
+
+  const addTransaction = (transaction) => {
+    axios.post('http://localhost:5000/transactions', transaction) // Update with your backend URL
+      .then((response) => dispatch({ type: 'ADD_TRANSACTION', payload: response.data }))
+      .catch((error) => console.error(error));
+  };
 
   return (
     <ExpenseTrackerContext.Provider
