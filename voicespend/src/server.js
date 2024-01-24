@@ -13,3 +13,11 @@ const db = mysql.createConnection({
     password: 'Jkobdelapaz00',
     database: 'expense_tracker',
   });
+
+  db.connect((err) => {
+    if (err) {
+      console.error('Error connecting to MySQL:', err);
+    } else {
+      console.log('Connected to MySQL database');
+    }
+  });
