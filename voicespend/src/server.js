@@ -37,3 +37,13 @@ const db = mysql.createConnection({
       }
     );
   });
+
+  app.get('/transactions', (req, res) => {
+    db.query('SELECT * FROM transactions', (err, results) => {
+      if (err) {
+        res.status(500).json({ message: err.message });
+      } else {
+        res.json(results);
+      }
+    });
+  });
