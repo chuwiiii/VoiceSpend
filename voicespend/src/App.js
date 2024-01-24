@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Grid } from '@material-ui/core';
+import axios from 'axios';
 
 import Details from './components/Details/Details';
 import Main from './components/Main/Main';
